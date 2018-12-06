@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link, NavLink, withRouter} from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     // added redirect to Home page after 2000 ms 
-    setTimeout(() => {
-        props.history.push('/about')
-    }, 2000);    
+    // setTimeout(() => {
+    //     props.history.push('/about')
+    // }, 2000);    
 
     return (
     <nav className="nav-wrapper red darken-3">
