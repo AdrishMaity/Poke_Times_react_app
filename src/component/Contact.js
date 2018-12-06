@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Contact = () => {
+const Contact = (props) => {
+
+    // added redirect to Home page after 2000 ms 
+    setTimeout(() => {
+        props.history.push('/')
+    }, 2000);
+
     return(
         <div className="container">
             <h4 className="center">Contact</h4>

@@ -1,7 +1,13 @@
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink, withRouter} from 'react-router-dom'
 
 const Navbar = () => {
+
+    // added redirect to Home page after 2000 ms 
+    setTimeout(() => {
+        props.history.push('/about')
+    }, 2000);    
+
     return (
     <nav className="nav-wrapper red darken-3">
         <div className="container">
@@ -16,4 +22,5 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+// by adding withRouter in the class we make it higher order component to access props without the route component
+export default withRouter(Navbar)
